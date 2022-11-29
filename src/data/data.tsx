@@ -30,7 +30,7 @@ export const KEYWORDS = [
   "canberra startup",
   "oliver bagin",
   "paras stefanopoulos",
-  "dextor todd",
+  "dexter todd",
 ];
 export const IMAGE: ImageType = {
   src: Image,
@@ -39,6 +39,15 @@ export const IMAGE: ImageType = {
 };
 
 export const TIMELINE: TimelineProps[] = [
+  {
+    id: 1,
+    name: "f",
+    date: "1/1/1111",
+    description: [
+      `fd`,
+      
+    ],
+  },
   {
     id: 1,
     name: "f",
@@ -60,11 +69,11 @@ export const FEATURES: FeatureProps[] = [
 export const BIOS: BioProps[] = [
   {
     id: 0,
-    name: "Dextor Todd",
-    description: [`Dextor is the Buisness Lead at Bardar. He primary reponsiblity
+    name: "Dexter Todd",
+    description: [`Dexter is the Buisness Lead at Bardar. He primary reponsiblity
     most is curating the project's vision and direction. He is also in charge of
     out reach and investment.`,
-    `Dextor skills include project managment, design and public speaking.`
+    `Dexter skills include project managment, design and public speaking.`
   ],
     image: "paras.jpeg",
     tags: ["Developer", "Founder"]
@@ -72,7 +81,7 @@ export const BIOS: BioProps[] = [
   {
     id: 1,
     name: "Paras Stefanopoulos",
-    description: [`Dextor is the Buisness Lead at Bardar. He primary reponsiblity
+    description: [`Dexter is the Buisness Lead at Bardar. He primary reponsiblity
     most is curating the project's vision and direction. He is also in charge of
     out reach and investment.`,
     `Dextor skills include project managment, design and public speaking.`

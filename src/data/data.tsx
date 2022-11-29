@@ -48,14 +48,6 @@ export const TIMELINE: TimelineProps[] = [
 
     ],
   },
-  {
-    id: 1,
-    name: "f",
-    date: "1/1/1111",
-    description: [
-      `fd`
-    ],
-  },
 ];
 
 export const FEATURES: FeatureProps[] = [

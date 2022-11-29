@@ -7,25 +7,30 @@ import {
   GREETING_TEXT,
   HERO_IMAGE,
 } from "../data/data";
-import ExperienceContainer from "./ExperienceContainer";
-import ProjectsContainer from "./ProjectsContainer";
-import SkillsContainer from "./SkillsContainer";
+import FeaturesContainer from "./FeaturesContainer";
+import BioContainer from "./BioContainer";
+import TimelineContainer from "./TimelineContainer";
 
 const HomeContainer: React.FC = () => {
   return (
-    <div className="antialiased bg-primary-content text-primary">
-      <Hero
-        image={HERO_IMAGE}
-        greetingText={GREETING_TEXT}
-        greetingDescription={GREETING_DESCRIPTION}
-        buttonText={CTA_TEXT}
-      />
-      <ExperienceContainer />
-      <div className="px-12 divider" />
-      <ProjectsContainer />
-      <div className="px-12 divider" />
-      <SkillsContainer />
-      <Footer />
+    <div className="antialiased text-primary" style={{minWidth: "375px"}}>
+      <div className="mt-0 pt-0">
+        <Hero
+          image={HERO_IMAGE}
+          greetingText={GREETING_TEXT}
+          greetingDescription={GREETING_DESCRIPTION}
+          buttonText={CTA_TEXT}
+        />
+      </div>
+      <div className="bg-gradient-to-b
+      to-primary from-secondary mt-0 pt-0">
+        <div className="mx-4">
+          <TimelineContainer />
+          <FeaturesContainer />
+          <BioContainer />
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.masked-overflow {
+
+    /* mask fade distance, for use in mask calculations */
+    --mask-height: 4rem;
+
+    --mask-height-top: 1rem;
+
+    /* If content exceeds height of container, overflow! */
+    overflow-y: scroll;
+
+    /* The CSS mask */
+
+    /* The content mask is a linear gradient from top to bottom */
+    --mask-image-content: linear-gradient(
+        to bottom,
+        transparent,
+        black var(--mask-height-top),
+        black calc(100% - var(--mask-height)),
+        transparent
+    );
+
+    /* Here we scale the content gradient to the width of the container 
+  minus the scrollbar width. The height is the full container height */
+    --mask-size-content: 100%;
+
+    /* Apply the mask image and mask size variables */
+    mask-image: var(--mask-image-content);
+    mask-size: var(--mask-size-content);
+
+    /* Position the content gradient in the top left, and the 
+  scroll gradient in the top right */
+    mask-position: 0 0;
+
+    /* We don't repeat our mask images */
+    mask-repeat: no-repeat;
+
+}
+
+.masked-overflow::-webkit-scrollbar {
+    display: none;
+}
+
+.masked-overflow {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

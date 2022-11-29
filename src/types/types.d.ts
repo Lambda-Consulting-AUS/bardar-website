@@ -1,17 +1,9 @@
-export type TimelineProps = {
-  key: number;
-  company: string;
-  position: string;
-  logo: string;
-  start: string;
-  end: string;
-  description: string;
-};
 type ImageType = {
   src: string;
   width: string;
   height: string;
 };
+
 export type SEOProps = {
   lang: string;
   url: string;
@@ -27,10 +19,6 @@ export type MenuProps = {
   route: string;
   name: string;
 };
-export type TimelineCardProps = {
-  styling: string;
-  num: number;
-} & TimelineProps;
 
 export type DrawerProps = {
   menuShow: boolean;
@@ -52,18 +40,30 @@ export type NavbarProps = {
   menuShow: unknown;
   showMenu: (e: boolean) => void;
 };
-export type ProjectCardProps = {
+
+export type TimelineProps = {
   id: number;
-  projectName: string;
-  projectDescription: string;
-  projectImageLogo: string;
-  tech: string[];
-  link: string;
-  buttonText: string;
+  name: string;
+  date: string;
+  description: string[];
 };
 
-export type SkillsProps = {
+export type FeatureProps = {
   id: number;
-  skill: string;
-  level: number;
+  name: string;
+  description: string[];
+};
+
+enum Socials {
+  LinkedIn,
+  GitHub
+}
+
+export type BioProps = {
+  id: number;
+  name: string;
+  image: string;
+  description: string[];
+  tags: string[];
+  links?: Record<keyof typeof Socials, string>;
 };

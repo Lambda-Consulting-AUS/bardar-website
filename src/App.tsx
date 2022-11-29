@@ -24,7 +24,7 @@ function App() {
       />
       <Navbar menuShow={menuShow} showMenu={showMenu} />
 
-      <HomeContainer />
+      <HomeContainer/>
     </ThemeContext.Provider>
   );
 }

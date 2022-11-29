@@ -20,9 +20,9 @@ export const MENU: MenuProps[] = [
   { key: 4, route: "bios", name: SECTIONS[3] },
 ];
 
-export const GREETING_TEXT = "BARDAR";
+export const GREETING_TEXT = "Bardar.";
 export const GREETING_DESCRIPTION =
-  "The end of uncertainty. Nightlife made easy.";
+  "The next level of nightlife.";
 
 export const KEYWORDS = [
   "BARDAR",

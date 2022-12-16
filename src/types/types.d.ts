@@ -32,7 +32,7 @@ export type HeadingProps = {
 export type HeroProps = {
   image: string;
   greetingText: string;
-  greetingDescription: string;
+  greetingDescription: string[];
   buttonText: string;
 };
 

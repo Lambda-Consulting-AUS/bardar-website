@@ -22,15 +22,7 @@ const HomeContainer: React.FC = () => {
           buttonText={CTA_TEXT}
         />
       </div>
-      <div className="bg-gradient-to-b
-      to-primary from-secondary mt-0 pt-0">
-        <div className="mx-4">
-          <TimelineContainer />
-          <FeaturesContainer />
-          <BioContainer />
-        </div>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };

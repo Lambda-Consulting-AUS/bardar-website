@@ -15,15 +15,13 @@ function App() {
       <Seo
         url={URL}
         lang="en"
-        metaDescription={GREETING_DESCRIPTION}
+        metaDescription={GREETING_DESCRIPTION[0]}
         keywords={KEYWORDS}
         image={IMAGE}
         title={NAME}
         author={NAME}
         theme={Theme}
       />
-      <Navbar menuShow={menuShow} showMenu={showMenu} />
-
       <HomeContainer/>
     </ThemeContext.Provider>
   );

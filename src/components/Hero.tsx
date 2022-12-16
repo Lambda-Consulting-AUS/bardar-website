@@ -31,17 +31,12 @@ const Hero: React.FC<HeroProps> = ({
             animate={{ scale: [0.5, 1] }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="mb-5 text-5xl font-bold text-neutral">{greetingText}</h1>
-            <p className="mb-5 text-neutral">{greetingDescription}</p>
-            <Link
-              to={"timeline"}
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="transition rounded-full cursor-pointer btn btn-neutral"
-            >
-              {buttonText}
-            </Link>
+            <h1 className="mb-2 text-5xl font-bold text-white">{greetingText}</h1>
+            {
+              greetingDescription.map((x) => {
+                return <p className="text-white font-semibold">{x}</p>
+              })
+            }
           </motion.div>
         </div>
       </div>

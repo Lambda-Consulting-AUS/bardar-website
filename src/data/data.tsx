@@ -22,7 +22,7 @@ export const MENU: MenuProps[] = [
 
 export const GREETING_TEXT = "Bardar.";
 export const GREETING_DESCRIPTION =
-  "The next level of nightlife.";
+  ["The next level of nightlife.", "Coming soon..."];
 
 export const KEYWORDS = [
   "BARDAR",

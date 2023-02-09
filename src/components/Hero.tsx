@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { Link } from "react-scroll";
 import { ReactComponent as HeroIllustration } from "../assets/hero.svg";
-import { ReactComponent as Illustration } from "../assets/hero_illustration.svg";
 import { HeroProps } from "../types/types";
 
 const Hero: React.FC<HeroProps> = ({

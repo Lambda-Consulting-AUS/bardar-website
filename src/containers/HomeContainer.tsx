@@ -1,4 +1,5 @@
 import React from "react";
+import Body from "../components/Body";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import {
@@ -7,9 +8,6 @@ import {
   GREETING_TEXT,
   HERO_IMAGE,
 } from "../data/data";
-import FeaturesContainer from "./FeaturesContainer";
-import BioContainer from "./BioContainer";
-import TimelineContainer from "./TimelineContainer";
 
 const HomeContainer: React.FC = () => {
   return (
@@ -22,6 +20,7 @@ const HomeContainer: React.FC = () => {
           buttonText={CTA_TEXT}
         />
       </div>
+      <Body></Body>
       <Footer />
     </div>
   );

@@ -1,15 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { URL } from "../data/data";
 import { SEOProps } from "../types/types";
 
 const Seo: React.FC<SEOProps> = ({
-  lang,
   url,
   metaDescription,
-  keywords,
   title,
-  author,
   image: metaImage,
   theme,
 }) => {
@@ -35,7 +31,7 @@ const Seo: React.FC<SEOProps> = ({
         content={metaDescription}
         data-react-helmet="true"
       />
-      <meta property="og:url" content={URL} data-react-helmet="true" />
+      <meta property="og:url" content={url} data-react-helmet="true" />
     </Helmet>
   );
 };

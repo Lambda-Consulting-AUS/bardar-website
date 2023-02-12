@@ -6,58 +6,46 @@ import {
   CardMedia,
   Chip,
   Typography,
+  CardActionArea
 } from "@mui/material";
-import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
-import { EntryProps, Link } from "../types/types";
-import * as fs from 'fs'
+import { EntryProps} from "../types/types";
+import { Grid } from "@mui/material";
 
 const Entry = (entry: EntryProps): JSX.Element => {
-  const [body, setBody] = useState('');
-
-  useEffect(() => {
-    fs.readFile(`./../content/${entry.title}.md`, 'utf8', (err, data) => {
-      setBody(data);
-    });
-  });
+  const link = window.location.origin + "/articals/" + entry.title.split(' ').join('-')
 
   return (
-    <Card sx={{position: 'relative'}}> 
-      <Chip 
-        sx={{position: 'absolute', right: 16, top: 16}}
-        label={entry.week}
-        color="primary"
-      />
-      {entry.image && <CardMedia
-        component="img"
-        height="300"
-        sx={{objectFit: "contain"}}
-        image={entry.image}
-        alt="green iguana"
-      />}
-      <CardContent>
-        <Typography gutterBottom variant="h4" component="div">
-          {entry.title}
-        </Typography>
-        {
-          <ReactMarkdown 
-            children={body} 
-            components={{
-              h2: ({node, level, ...props}) => <Typography sx={{ paddingTop: 2, paddingBottom: 1 }} variant="h5" {...props}/>,
-              h3: ({node, level, ...props}) => <Typography sx={{ paddingTop: 1}} variant="h6" {...props}/>,
-              h4: ({node, level, ...props}) => <Typography sx={{ paddingTop: 1}} variant="subtitle2" {...props}/>,
-              p:  ({node, ...props}) => <Typography gutterBottom variant="body1" sx={{ paddingTop: 1 }} {...props}/>,
-              li: ({node, ...props}) => <li><Typography {...props}></Typography></li>
-            }}
+    <Grid item xs={4}>
+      <Card sx={{position: 'relative', borderRadius: 4}} color="black"> 
+        <CardActionArea href={link}> 
+          <Chip 
+            sx={{position: 'absolute', right: 16, top: 16}}
+            label={entry.week}
+            color="primary"
           />
-        }
-      </CardContent>
-      <CardActions>
-        {entry.links && entry.links!.map((x: Link): JSX.Element => {
-          return <Button size="small" href={x.link}>{x.title}</Button>
-        })}
-      </CardActions>
-    </Card>
+          {entry.image && <CardMedia
+            component="img"
+            height="200"
+            sx={{objectFit: "cover", height: 200}}
+            image={entry.image}
+            alt="green iguana"
+          />}
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div" sx={{fontWeight: 'bold'}}>
+              {entry.title}
+            </Typography>
+            <Typography gutterBottom variant="body1" component="div" >
+              {entry.body[0].slice(0,120) + "..."}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        {/* <CardActions>
+          <Button size="small" onClick={() => {
+            navigator.clipboard.writeText(link);
+          }}>Share</Button>
+        </CardActions> */}
+      </Card>
+    </Grid>
   );
 };
 

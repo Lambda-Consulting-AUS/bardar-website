@@ -37,10 +37,10 @@ export type Link = {
 export type EntryProps = {
   title: string;
   week: string;
-  image?: string;
-  body: string;
-  date?: Date;
-  links?: Link[];
+  image: string;
+  body: string[];
+  date: Date;
+  links: Link[];
 };
 
 export class MarkDown {

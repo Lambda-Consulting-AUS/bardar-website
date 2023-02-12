@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { motion } from "framer-motion";
 import React from "react";
 import { ReactComponent as HeroIllustration } from "../assets/hero.svg";
@@ -8,6 +9,8 @@ const Hero: React.FC<HeroProps> = ({
   greetingDescription,
   buttonText,
 }) => {
+  const link = window.location.origin + "/articals"
+
   return (
     <div
       className="relative min-h-screen pt-0 mt-0 antialiased hero bg-gradient-to-b from-primary to-secondary text-primary-content"
@@ -35,6 +38,9 @@ const Hero: React.FC<HeroProps> = ({
                 return <p className="text-white font-semibold">{x}</p>
               })
             }
+            <Button sx={{marginTop: 2}} variant="contained" size="large" href={link}>
+              Want more now? Checkout Bardar Articles!
+            </Button>
           </motion.div>
         </div>
       </div>

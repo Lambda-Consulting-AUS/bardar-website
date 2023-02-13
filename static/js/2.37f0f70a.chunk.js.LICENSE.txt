@@ -4,13 +4,6 @@ object-assign
 @license MIT
 */
 
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -27,13 +20,25 @@ PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 
 /**
- * @license React
- * react-is.production.min.js
+ * @remix-run/router v1.3.2
  *
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Remix Software Inc.
  *
  * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */
+
+/**
+ * React Router v6.8.1
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
  */
 
 /** @license MUI v5.11.0

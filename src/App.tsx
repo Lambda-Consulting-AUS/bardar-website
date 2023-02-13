@@ -2,7 +2,6 @@ import { useState } from "react";
 import HomeContainer from "./Containers/HomeContainer";
 import { ThemeContext, ThemeContextProps } from "./context/ThemeProvider";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Body from "./components/Body";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ArticlesContainer from "./Containers/ArticlesContainer";
 import ArticleContainer from "./Containers/ArticleContainer";

@@ -8,7 +8,6 @@ import {
   HERO_IMAGE,
 } from "../data/data";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Box, Button } from "@mui/material";
 
 const theme = createTheme({
   typography: {

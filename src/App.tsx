@@ -1,10 +1,10 @@
 import { useState } from "react";
-import HomeContainer from "./Containers/HomeContainer";
+import HomeContainer from "./containers/HomeContainer";
 import { ThemeContext, ThemeContextProps } from "./context/ThemeProvider";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import ArticlesContainer from "./Containers/ArticlesContainer";
-import ArticleContainer from "./Containers/ArticleContainer";
+import ArticlesContainer from "./containers/ArticlesContainer";
+import ArticleContainer from "./containers/ArticleContainer";
 
 function App() {
   const [Theme, setTheme] = useState("light");

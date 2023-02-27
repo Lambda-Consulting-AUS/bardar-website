@@ -33,7 +33,7 @@ module.exports = {
                    
           "warning": "#FB3779",
                    
-          "error": "#FB3779",
+          "error": "#FFFFFF",
         },
       },
     ],

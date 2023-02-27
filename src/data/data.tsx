@@ -19,7 +19,6 @@ export const KEYWORDS = [
   "find bars",
   "canberra startup",
   "oliver bagin",
-  "paras stefanopoulos",
   "dexter todd",
 ];
 export const IMAGE: ImageType = {

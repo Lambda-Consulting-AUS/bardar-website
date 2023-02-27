@@ -12,7 +12,7 @@ const ArticleContainer: React.FC = () => {
   </div>
   }
   return (
-    <Box className="antialiased text-primary bg-gradient-to-r from-info to-secondary" style={{minWidth: "375px", minHeight: "100vh", paddingTop: 8}}>
+    <Box className="antialiased text-primary bg-gradient-to-r from-info to-secondary" style={{minWidth: "375px", minHeight: "100vh", paddingTop: 8, paddingBottom: "72px"}}>
       <Artical {...article}/>
     </Box>
   );

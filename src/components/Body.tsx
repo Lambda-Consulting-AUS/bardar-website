@@ -1,36 +1,56 @@
 import { Search } from "@mui/icons-material";
-import { Box, Divider, Grid, IconButton, InputBase, Paper } from "@mui/material";
+import { Box, Grid, IconButton, InputBase, Paper } from "@mui/material";
 import { Container } from "@mui/system";
-import React from "react";
+import React, { useEffect } from "react";
 import { reflections } from "../content/Content";
 import { EntryProps } from "../types/types";
-import ButtonAppBar from "./ButtonAppBar";
+import { motion, useAnimation } from "framer-motion";
 import Entry from "./Entry";
+import { useInView } from "react-intersection-observer";
 
 const Body = () => {
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
     <React.Fragment>
       <Container sx={{minWidth: 500, backgroundColor: "rbga(0, 0, 0, 0)"}}>
-      <Box sx={{ flexGrow: 1, paddingY: 4, flex: 1, flexDirection: "column", alignContent: "center"}}>
-        <Paper
-          component="form"
-          sx={{ p: '2px 4px', m: '0 0 32px 0', display: 'flex', alignItems: 'center', width: 400 }}
+      <Box sx={{ flexGrow: 1, paddingY: 6, flex: 1, flexDirection: "column", alignContent: "center"}}>
+        <motion.div
+          initial="hidden"
+          transition={{ duration: 0.3 }}
+          ref={ref}
+          animate={controls}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 }
+          }}
         >
-          <InputBase
-            sx={{ flex: 1, marginLeft: 2 }}
-            placeholder="Search Bardar Articles"
-            inputProps={{ 'aria-label': 'Search Bardar Articles' }}
-          />
-          <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-            <Search />
-          </IconButton>
-        </Paper>
+          <Paper
+            component="form"
+            sx={{ p: '2px 4px', mx: 'auto', mb: 6, display: 'flex', alignItems: 'center', width: 400, backgroundColor: 'white'}}
+          >
+            <InputBase
+              sx={{ flex: 1, marginLeft: 2, color: 'black' }}
+              placeholder="Search NLN Articles"
+              inputProps={{ 'aria-label': 'Search Bardar Articles' }}
+            />
+            <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
+              <Search />
+            </IconButton>
+          </Paper>
+        </motion.div>
         <Grid container spacing={4}>
           {reflections.map((x: EntryProps): JSX.Element => {
             return (
-              <Grid item xs={16}>
-                <Entry {...x}></Entry>
-              </Grid>
+              <Entry {...x}></Entry>
             );
           })}
         </Grid>

@@ -3,11 +3,11 @@ import { NAME } from "../data/data";
 const Footer: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col pt-3 bg-primary md:items-center f-f-l">
-          <h1 className="text-4xl font-black text-white">
+      <div className="flex flex-col py-4 bg-white md:items-center f-f-l">
+          <h1 className="text-4xl font-black text-black">
             BARDAR PTY LTD.
           </h1>
-          <div className="my-1 text-base text-center text-white ">
+          <div className="my-1 text-base text-center text-black ">
             <div className="items-center flex">
               <div className="mx-4">
                 ABN: 61664482384
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="mb-3 text-md text-white">
+          <div className="text-md text-black">
             <p>
               © {new Date().getFullYear()} {NAME}. All rights reserved.
             </p>
